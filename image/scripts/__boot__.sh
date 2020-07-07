@@ -48,7 +48,7 @@ then
       if [[ -n "$document" ]]; then
         if [ -f "$document.pdf" ]; then
           echo "'$document.pdf' was found. Setting its permissions to 'chmod 777 $document.pdf' to make it available outside container."
-          chmod 777 "$document.pdf" || true
+          chmod 777 "$document.*" || true
           echo "Now exiting container."
           exit
         fi
